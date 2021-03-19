@@ -1,0 +1,32 @@
+html, body, h1, h2, h3, h4, h5, h6, a, img, ul, li, form, article, footer, header, main, nav, section, button{
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: Oswald, sans-serif;
+}
+
+#logo{
+    width: 100%;
+    height: 12vh;
+    box-shadow: 1px 1px 5px #ddd;
+    background-color: #fff;
+	position: fixed;
+	z-index: 999999;
+}
+
+#logo a img{
+    width: 8%;
+    padding: 1em;
+}
+
+#hero{
+    height: 100vh;
+    background-image: url("../images/fondo.jpg");
+}
+
+#hero article{
+    height: 88vh;
+}
