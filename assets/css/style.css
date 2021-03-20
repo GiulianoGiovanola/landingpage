@@ -59,7 +59,7 @@ p{
 
 #hero{
     height: 100vh;
-    background-image: url("../images/fondo.jpg");
+    background-image: url("../images/fondo.svg");
     background-size: cover;
 }
 
