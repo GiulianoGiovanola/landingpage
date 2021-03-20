@@ -16,11 +16,11 @@ p{
     text-align: center;
 }
 
-#hero article div h1, #features h3, #calltoaction h1, #calltoaction a, #botonenviar button{
+#hero article div h1, #features h3, #calltoaction h2, #calltoaction a, #botonenviar button{
     text-transform: uppercase;
 }
 
-#features h3, #features p, #calltoaction h1, #calltoaction p, #form h1, #form p{
+#features h3, #features p, #calltoaction h2, #calltoaction p, #form h2, #form p{
     color: #6C0C44;
 }
 
@@ -32,8 +32,16 @@ p{
     width: 100%;
 }
 
+#features div div a img, #calltoaction div, #copyright{
+    width: 50%;
+}
+
 #features p, #calltoaction p, #calltoaction a{
     font-size: 1em;
+}
+
+#form form ul, #botonenviar, #redessociales ul{
+    list-style: none;
 }
 
 #logo{
@@ -104,10 +112,6 @@ p{
     display: inline-block;
 }
 
-#features div div a img{
-    width: 50%;
-}
-
 #features h3{
     font-size: 1.25em;
     font-weight: 600;
@@ -118,11 +122,10 @@ p{
 }
 
 #calltoaction div{
-    width: 50%;
     margin: 0 auto 3em;
 }
 
-#calltoaction h1, #form h1{
+#calltoaction h2, #form h2{
     font-size: 2.25em;
 }
 
@@ -142,6 +145,10 @@ p{
     line-height: 3em;
 }
 
+#form h2{
+    padding-bottom: 1em;
+}
+
 #form p input, #form p select{
     background-color: #DD5E54;
     border: none;
@@ -154,10 +161,6 @@ p{
 
 #form p select{
     padding: 1em 12.2em;
-}
-
-#form form ul, #botonenviar{
-    list-style: none;
 }
 
 #form form ul div{
@@ -183,4 +186,32 @@ p{
     margin: 2em auto;
     background-color: #faaf52;
     width: 12%;
+}
+
+footer{
+    background-color: #6C0C44;
+    height: 30vh;
+}
+
+#copyright{
+    padding: 9em 0 0 1em;
+    float: left;
+}
+
+#copyright p{
+    color: #fff;
+}
+
+#redessociales li{
+    float: left;
+    width: 8%;
+    margin-top: 5em;
+}
+
+#facebook{
+    margin-left: 9em;
+}
+
+#redessociales img{
+    width: 40%;
 }
