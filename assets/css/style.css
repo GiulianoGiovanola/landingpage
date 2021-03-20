@@ -12,16 +12,24 @@ p{
     font-family: Karla, sans-serif;
 }
 
-#hero article div, #features, #features div{
+#hero article div, #features, #features div, #calltoaction{
     text-align: center;
 }
 
-#hero article div h1, #features h3{
+#hero article div h1, #features h3, #calltoaction h1, #calltoaction a{
     text-transform: uppercase;
 }
 
-#logo, #features{
+#features h3, #features p, #calltoaction h1, #calltoaction p{
+    color: #6C0C44;
+}
+
+#logo, #features, #calltoaction div div{
     width: 100%;
+}
+
+#features p, #calltoaction p, #calltoaction a{
+    font-size: 1em;
 }
 
 #logo{
@@ -57,7 +65,8 @@ p{
 
 #hero article div h1{
     font-size: 4.5em;
-    color: #F60C5B;
+    /*color: #F60C5B;*/
+    color: #DD5E54;
 }
 
 #hero article div p{
@@ -83,7 +92,7 @@ p{
 }
 
 #features{
-    padding: 11em 0;
+    padding: 12em 0 12em;
 }
 
 #features div{
@@ -101,6 +110,28 @@ p{
     font-weight: 600;
 }
 
-#features p{
-    font-size: 1em;
+#calltoaction{
+    padding-bottom: 12em;
+}
+
+#calltoaction div{
+    width: 50%;
+    margin: 0 auto 3em;
+}
+
+#calltoaction h1{
+    font-size: 2.25em;
+}
+
+#calltoaction p{
+    line-height: 1.5em;
+    margin-top: 1em;
+}
+
+#calltoaction a{
+    text-decoration: none;
+    color: #fff;
+    cursor:pointer;
+    background-color: #DD5E54;
+	padding: 1em;
 }
