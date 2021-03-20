@@ -29,8 +29,54 @@ html, body, h1, h2, h3, h4, h5, h6, a, img, ul, li, form, article, footer, heade
 }
 
 #hero article{
-    height: 88vh;
+    height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
+}
+
+#hero article div{
+    text-align: center;
+    margin: auto 35em auto 0;
+    width: 40%;
+}
+
+#hero article div h1{
+    text-transform: uppercase;
+    font-size: 72px;
+    color: #F60C5B;
+}
+
+#hero article div p{
+    color: #F60C5B;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#hero article div div{
+    margin: 0 auto;
+}
+
+.completo{
+    text-decoration: none;
+    color: #FE9300;
+    transition: 0.4s ease-out;
+	box-shadow: 0 1px 0 0 #FE9300;
+}
+
+.completo:hover{
+    box-shadow: 0 2px 0 0 #FE9300;
+}
+
+#features{
+    width: 100%;
+    text-align: center;
+    padding: 7.5em 0;
+}
+
+#features div{
+    width: 26%;
+	padding: 0 2em 2em 2em;
+    text-align: center;
+    display: inline-block;
 }
