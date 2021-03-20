@@ -75,38 +75,49 @@
             </section>
 
         <!-- Form -->
-            <article id="articlecontactme" style="padding: 4em 0 0 1em;">
-                <h1 id="h1contactme">CONTACT ME</h1>
-                <form id="formcontactme">
+            <section id="form">
+                <h1>CONTACT ME</h1>
+                <form>
                     <ul>
-                        <div class="divcontactme">
-                            <li class="licontactme">
-                                <input type="text" id="nombre" name="nombre_del_usuario" placeholder="YOUR NAME">
+                        <div>
+                            <li class="liform">
+                                <p>
+                                    Nombre <br> 
+                                    <input type="text" id="nombre" name="nombre_del_usuario">
+                                </p>
                             </li>
-                            <li class="licontactme">
-                                <input type="email" id="emailcontact" name="email_del_usuario" placeholder="EMAIL ADDRESS" required>
-                            </li>
-                        </div>
-                        <div class="divcontactme">
-                            <li class="licontactme">
-                                <input type="text" id="trabajo" name="tipo_de_trabajo" placeholder="TYPE OF WORK">
-                            </li>
-                            <li class="licontact">
-                                <input type="text" id="presupuesto" name="presupuesto" placeholder="BUDGET">
+                            <li>
+                                <p>
+                                    Email <br> 
+                                    <input type="email" id="emailcontact" name="email_del_usuario" required>
+                                </p>
                             </li>
                         </div>
-                        <div class="divcontactme">
-                            <li class="licontactme">
-                                <input type="text" id="descripcion" name="descripcion_del_trabajo" placeholder="PROJECT DESCRIPTION...">
+                        <div>
+                            <li class="liform">
+                                <p>
+                                    Género <br>
+                                    <select name="genero_del_usuario">
+                                    <option>Elegir Género</option>
+                                    <option>Femenino</option>
+                                    <option>Masculino</option>
+                                    <option>Otro</option>
+                                    </select>
+                                </p>    
+                            </li>
+                            <li>
+                                <p>
+                                    Comentarios <br> 
+                                    <input type="textarea" id="descripcion" name="comentarios_del_usuario">
+                                </p>
                             </li>
                         </div>
                     </ul>
-                    <li class="botonenviar">
-                        <button class="ultimoboton" style="text-transform: uppercase; transform: translate(0);" type="submit" onclick="enviarEmail2()"><img id="imgcontactme" src="assets/iconos/paper-plane-icon.svg">SEND MESSAGE</button> 
+                    <li id="botonenviar">
+                        <button type="submit">enviar mensaje</button> 
                     </li>
                 </form>
-                
-            </article>
+            </section>
         </main>
         <footer>
             

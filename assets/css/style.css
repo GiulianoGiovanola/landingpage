@@ -12,16 +12,20 @@ p{
     font-family: Karla, sans-serif;
 }
 
-#hero article div, #features, #features div, #calltoaction{
+#hero article div, #features, #features div, #calltoaction, #form{
     text-align: center;
 }
 
-#hero article div h1, #features h3, #calltoaction h1, #calltoaction a{
+#hero article div h1, #features h3, #calltoaction h1, #calltoaction a, #botonenviar button{
     text-transform: uppercase;
 }
 
-#features h3, #features p, #calltoaction h1, #calltoaction p{
+#features h3, #features p, #calltoaction h1, #calltoaction p, #form h1, #form p{
     color: #6C0C44;
+}
+
+#calltoaction a, #form p input, #form p select, #botonenviar button{
+    color: #fff;
 }
 
 #logo, #features, #calltoaction div div{
@@ -65,7 +69,6 @@ p{
 
 #hero article div h1{
     font-size: 4.5em;
-    /*color: #F60C5B;*/
     color: #DD5E54;
 }
 
@@ -110,7 +113,7 @@ p{
     font-weight: 600;
 }
 
-#calltoaction{
+#calltoaction, #form{
     padding-bottom: 12em;
 }
 
@@ -119,7 +122,7 @@ p{
     margin: 0 auto 3em;
 }
 
-#calltoaction h1{
+#calltoaction h1, #form h1{
     font-size: 2.25em;
 }
 
@@ -130,8 +133,54 @@ p{
 
 #calltoaction a{
     text-decoration: none;
-    color: #fff;
     cursor:pointer;
     background-color: #DD5E54;
 	padding: 1em;
+}
+
+#form p{
+    line-height: 3em;
+}
+
+#form p input, #form p select{
+    background-color: #DD5E54;
+    border: none;
+    text-align: center;
+}
+
+#form p input{
+    padding: 1em 10em;
+}
+
+#form p select{
+    padding: 1em 12.2em;
+}
+
+#form form ul, #botonenviar{
+    list-style: none;
+}
+
+#form form ul div{
+    width: 100%;
+}
+
+#form form ul div li{
+    width: 40%;
+    float:left;
+}
+
+.liform{
+    margin-left: 8.5em;
+}
+
+#botonenviar{
+    padding-top: 1em;
+    cursor: pointer;
+}
+
+#botonenviar button{
+    padding: 1em;
+    margin: 2em auto;
+    background-color: #faaf52;
+    width: 12%;
 }
