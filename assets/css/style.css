@@ -8,11 +8,11 @@ html, body, h1, h2, h3, h4, h5, h6, a, img, ul, li, form, article, footer, heade
 	font-family: Oswald, sans-serif;
 }
 
-p{
+p, option{
     font-family: Karla, sans-serif;
 }
 
-#hero article div, #features, #features div, #calltoaction, #form{
+#hero article div, #features, .divfeatures, #calltoaction, #form, #form p input, #form p select{
     text-align: center;
 }
 
@@ -28,11 +28,15 @@ p{
     color: #fff;
 }
 
-#logo, #features, #calltoaction div div{
+#hero article div div, form{
+    margin: 0 auto;
+}
+
+#logo, #features, #calltoaction div div, #form form ul, #form form ul div{
     width: 100%;
 }
 
-#features div div a img, #calltoaction div, #copyright{
+.divfeatures div a img, #calltoaction div, #copyright{
     width: 50%;
 }
 
@@ -46,14 +50,14 @@ p{
 
 #logo{
     height: 12vh;
-    box-shadow: 1px 1px 5px #ddd;
+    box-shadow: 1px 1px 5px rgb(194, 192, 192);
     background-color: #fff;
 	position: fixed;
 	z-index: 999999;
 }
 
 #logo a img{
-    width: 8%;
+    width: 7%;
     padding: 1em;
 }
 
@@ -72,7 +76,7 @@ p{
 
 #hero article div{
     margin: auto 35em auto 0;
-    width: 45%;
+    width: 46%;
 }
 
 #hero article div h1{
@@ -87,10 +91,6 @@ p{
     line-height: 1.5em;
 }
 
-#hero article div div{
-    margin: 0 auto;
-}
-
 .completo{
     text-decoration: none;
     color: #FE9300;
@@ -103,10 +103,10 @@ p{
 }
 
 #features{
-    padding: 12em 0 12em;
+    padding: 12em 0;
 }
 
-#features div{
+.divfeatures, .divfeatures div{
     width: 26%;
 	padding: 0 2em 2em;
     display: inline-block;
@@ -141,6 +141,12 @@ p{
 	padding: 1em;
 }
 
+form{
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
 #form p{
     line-height: 3em;
 }
@@ -152,7 +158,6 @@ p{
 #form p input, #form p select{
     background-color: #DD5E54;
     border: none;
-    text-align: center;
 }
 
 #form p input{
@@ -163,17 +168,13 @@ p{
     padding: 1em 12.2em;
 }
 
-#form form ul div{
-    width: 100%;
-}
-
 #form form ul div li{
     width: 40%;
     float:left;
 }
 
 .liform{
-    margin-left: 8.5em;
+    margin-left: 10%;
 }
 
 #botonenviar{
@@ -185,7 +186,6 @@ p{
     padding: 1em;
     margin: 2em auto;
     background-color: #faaf52;
-    width: 12%;
 }
 
 footer{
@@ -214,4 +214,191 @@ footer{
 
 #redessociales img{
     width: 40%;
+}
+
+@media(max-width: 991px )and (min-width: 481px){
+    .divfeatures, .divfeatures div, #calltoaction div{
+        width: 70%;
+    }
+
+    #features p, #calltoaction p, #calltoaction a, #botonenviar button, #hero article div p{
+        font-size: 1em;
+    }
+
+    #logo a img{
+        width: 9%;
+        display: block;
+        margin: auto;
+    }
+    
+    #hero{
+        background-position: 70% 30%;
+    }
+
+    #hero article div{
+        margin: auto 22em auto 0;
+        width: 46%;
+    }
+
+    #hero article div h1{
+        font-size: 5em;
+    }
+
+    .divfeatures{
+        padding: 0 2em 5em;
+    }
+
+    .divfeatures div a img{
+        width: 11%;
+    }
+
+    #features{
+        padding: 8em 0;
+    }
+
+    #features h3{
+        font-size: 1.5em;
+    }
+
+    #calltoaction, #form{
+        padding-bottom: 8em;
+    }
+
+    #calltoaction div{
+        width: 77%;
+    }
+
+    #calltoaction h2, #form h2{
+        font-size: 3em;
+    }
+
+    #form h2{
+        padding-bottom: 0.5em;
+    }
+
+    #form form ul div li{
+        width: 42%;
+    }
+
+    .liform{
+        margin-left: 5%;
+        margin-right: 3em;
+    }
+
+    #form p input{
+        padding: 1em 5em;
+    }
+
+    #form p select{
+        padding: 1em 7.35em;
+    }
+
+    #botonenviar{
+        display: inline-block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    #botonenviar button{
+        margin: 1em auto;
+        width: 20%;
+    }
+
+    #copyright{
+        padding: 7.5em 0 0 1em;
+    }
+
+    #redessociales li{
+        margin-top: 4.5em;
+    }
+
+    #redessociales img{
+        width: 50%;
+    }
+
+    #facebook{
+        margin-left: 4.5em;
+    }
+}
+
+@media(max-width: 480px){
+    .divfeatures, .divfeatures div, #calltoaction div, #form form ul div li{
+        width: 100%;
+    }
+
+    #hero article div, .divfeatures, .divfeatures div{
+        width: 90%;
+    }
+
+    #features p, #calltoaction p, #calltoaction a, #botonenviar button, #hero article div p, #copyright p{
+        font-size: 0.9em;
+    }
+
+    #logo a img{   
+        width: 16%;
+        display: block;
+        margin: auto;
+    }
+
+    #hero{
+        background-position: 0% 30%;
+    }
+
+    #hero article div{
+        margin: auto 0;
+    }
+
+    #hero article div p{
+        font-size: 1em;
+    }
+
+    #features{
+        padding: 7em 0;
+    }
+
+    .divfeatures, .divfeatures div{
+        padding: 0 0em 1em;
+        display: inline-block;
+    }
+
+    .divfeatures div a img{
+        width: 10%;
+    }
+
+    #calltoaction div{
+        width: 92%;
+    }
+
+    #calltoaction, #form {
+        padding-bottom: 7em;
+    }
+
+    #form p input{
+        padding: 1em 5.3em;
+    }
+
+    #form p select{
+        padding: 1em 7.75em;
+    }
+
+    .liform{
+        margin-left: 0;
+    }
+
+    #copyright{
+        padding: 7.8em 0 0 1em;
+    }
+
+    #redessociales{
+        position: absolute;
+    }
+
+    #redessociales li{
+        width: 15%;
+        margin-top: 3em;
+    }
+
+    #facebook{
+        margin-left: 6.5em;
+    }
 }
