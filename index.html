@@ -78,19 +78,19 @@
         <!-- Form -->
             <section id="form">
                 <h2>CONTACT ME</h2>
-                <form>
+                <form id="main_form" action="https://prog-3-leads-api-rest.vercel.app/leads" method="POST">
                     <ul>
                         <div>
                             <li class="liform">
                                 <p>
                                     Nombre <br> 
-                                    <input type="text" id="nombre" name="nombre_del_usuario">
+                                    <input type="text" id="nombre" name="nombre">
                                 </p>
                             </li>
                             <li>
                                 <p>
                                     Email <br> 
-                                    <input type="email" id="emailcontact" name="email_del_usuario" required>
+                                    <input type="email" id="emailcontact" name="email">
                                 </p>
                             </li>
                         </div>
@@ -98,18 +98,18 @@
                             <li class="liform">
                                 <p>
                                     Género <br>
-                                    <select name="genero_del_usuario">
-                                    <option>Elegir Género</option>
-                                    <option>Femenino</option>
-                                    <option>Masculino</option>
-                                    <option>Otro</option>
+                                    <select name="sexo">
+                                    <option value="">Elegir Género</option>
+                                    <option value="F">Femenino</option>
+                                    <option value="M">Masculino</option>
+                                    <option value="O">Otro</option>
                                     </select>
                                 </p>    
                             </li>
                             <li>
                                 <p>
                                     Comentarios <br> 
-                                    <input type="textarea" id="descripcion" name="comentarios_del_usuario">
+                                    <input type="textarea" id="descripcion" name="comentarios">
                                 </p>
                             </li>
                         </div>
@@ -118,6 +118,7 @@
                         <button type="submit">enviar mensaje</button> 
                     </li>
                 </form>
+                <p class="respuesta_form" style="display: none;"></p>
             </section>
         </main>
         <footer>
@@ -139,6 +140,8 @@
             </section>
             
         </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js" integrity="sha512-UdIMMlVx0HEynClOIFSyOrPggomfhBKJE28LKl8yR3ghkgugPnG6iLfRfHwushZl1MOPSY6TsuBDGPK2X4zYKg==" crossorigin="anonymous"></script>
         <script type="text/javascript" src="assets/js/main.js"></script>
     </body>
 </html>
