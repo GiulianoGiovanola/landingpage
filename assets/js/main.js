@@ -4,7 +4,7 @@ $( document ).ready(function() {
     //Validacion mail
     $.validator.addMethod("customemail",
         function (value, element) {
-            return /^\w+([-+.']\w+)@\w+([-.]\w+)\.\w+([-.]\w+)*$/.test(value);
+            return /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(value);
         },
         "Ingresá una dirección de email"
     );
@@ -34,14 +34,14 @@ $( document ).ready(function() {
         },
         messages:{
             "nombre": "Ingresa tu nombre",
-            "email": "Ingresa tu email valido",
+            "email": "Ingresa un email valido",
             "sexo": "Ingresa tu valor",
             "comentarios": "Ingresa tus comentarios"
         },
         submitHandler: function(form){
             //$(form).submit();
 
-            $ajax({
+            $.ajax({
                 url: form.action,
                 type: form.method,
                 data: $(form).serialize(),
@@ -56,4 +56,27 @@ $( document ).ready(function() {
             })
         }
       });
+
+    const loadLeads = () =>{
+        $.ajax({
+            url: 'https://prog-3-leads-api-rest.vercel.app/leads',
+            type: 'GET',
+            success: function(response){
+                $('.listado').html(' ');
+                response.forEach(element => {
+                    $('.listado').append('<li>' + element.nombre + '</li>')
+                    if(element.sexo === "M" || element.sexo === "Male" || element.sexo === "male" || element.sexo === "H" || element.sexo === "Hombre" || element.sexo === "hombre" || element.sexo === "Masculino" || element.sexo === "masculino"){
+                        $('.listado').append('<li> Masculino </li>')
+                    }else if (element.sexo === "F" || element.sexo === "Female" || element.sexo === "female" || element.sexo === "Mujer" || element.sexo === "mujer" || element.sexo === "Femenino" || element.sexo === "femenino"){
+                        $('.listado').append('<li> Femenino </li>')
+                    }else{
+                        $('.listado').append('<li> Otro </li>')
+                    }
+                    $('.listado').append('<li>' + element.comentarios + '</li>')
+                });
+            }
+        })
+    }
+
+    loadLeads()
 });

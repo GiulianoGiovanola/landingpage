@@ -12,7 +12,7 @@ p, option{
     font-family: Karla, sans-serif;
 }
 
-#hero article div, #features, .divfeatures, #calltoaction, #form, #form p input, #form p select{
+#hero article div, #features, .divfeatures, #calltoaction, #form, #form p input, #form p select, #usuarios h2, #usuarios ul{
     text-align: center;
 }
 
@@ -20,7 +20,7 @@ p, option{
     text-transform: uppercase;
 }
 
-#features h3, #features p, #calltoaction h2, #calltoaction p, #form h2, #form p{
+#features h3, #features p, #calltoaction h2, #calltoaction p, #form h2, #form p, #usuarios div h2, #secciones li, .listado{
     color: #6C0C44;
 }
 
@@ -46,6 +46,11 @@ p, option{
 
 #form form ul, #botonenviar, #redessociales ul{
     list-style: none;
+}
+
+#nombre-error, #email-error, #sexo-error, #descripcion-error{
+    display: block;
+    font-size: 0.9em;
 }
 
 #logo{
@@ -102,8 +107,12 @@ p, option{
     box-shadow: 0 2px 0 0 #FE9300;
 }
 
-#features{
-    padding: 12em 0;
+#features, #calltoaction, #form, #usuarios{
+    padding: 8em 0;
+}
+
+#calltoaction, #usuarios{
+    background-color: #ddd;
 }
 
 .divfeatures, .divfeatures div{
@@ -115,10 +124,6 @@ p, option{
 #features h3{
     font-size: 1.25em;
     font-weight: 600;
-}
-
-#calltoaction, #form{
-    padding-bottom: 12em;
 }
 
 #calltoaction div{
@@ -143,16 +148,10 @@ p, option{
 
 form{
     max-width: 90%;
-    display: flex;
-    flex-direction: column;
 }
 
 #form p{
     line-height: 3em;
-}
-
-#form h2{
-    padding-bottom: 1em;
 }
 
 #form p input, #form p select{
@@ -169,12 +168,8 @@ form{
 }
 
 #form form ul div li{
-    width: 40%;
+    width: 100%;
     float:left;
-}
-
-.liform{
-    margin-left: 10%;
 }
 
 #botonenviar{
@@ -186,6 +181,32 @@ form{
     padding: 1em;
     margin: 2em auto;
     background-color: #faaf52;
+}
+
+#usuarios div h2{
+    font-size: 2em;
+}
+
+#secciones, .listado{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 400px 400px 400px;
+    justify-content: center;
+    padding-bottom: 1em;
+}
+
+#secciones{
+    padding-top: 2em;
+}
+
+.titulosusuarios{
+    font-weight: 400 !important;
+}
+
+#secciones li, .listado{
+    list-style: none;
+    font-size: 1.1em;
+    font-weight: 300;
 }
 
 footer{
@@ -272,19 +293,6 @@ footer{
         font-size: 3em;
     }
 
-    #form h2{
-        padding-bottom: 0.5em;
-    }
-
-    #form form ul div li{
-        width: 42%;
-    }
-
-    .liform{
-        margin-left: 5%;
-        margin-right: 3em;
-    }
-
     #form p input{
         padding: 1em 5em;
     }
@@ -319,10 +327,14 @@ footer{
     #facebook{
         margin-left: 4.5em;
     }
+
+    #secciones, .listado{
+        grid-template-columns: 200px 200px 200px;
+    }
 }
 
 @media(max-width: 480px){
-    .divfeatures, .divfeatures div, #calltoaction div, #form form ul div li{
+    .divfeatures, .divfeatures div, #calltoaction div{
         width: 100%;
     }
 
@@ -400,5 +412,9 @@ footer{
 
     #facebook{
         margin-left: 6.5em;
+    }
+
+    #secciones, .listado{
+        grid-template-columns: 110px 110px 110px;
     }
 }
