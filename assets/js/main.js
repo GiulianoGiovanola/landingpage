@@ -51,7 +51,9 @@ $( document ).ready(function() {
                 success: function(response){
                     console.log(response)
                     $('.respuesta_form').show();
-                    $('.respuesta_form').html('Gracias ' + response.nombre + ' por su mensaje')
+                    $('.respuesta_form').html('Gracias ' + response.nombre + ' por su mensaje');
+                    $('.listado').html(' ');
+                    loadLeads();
                 }
             })
         }
